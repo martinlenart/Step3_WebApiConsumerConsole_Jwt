@@ -1,4 +1,5 @@
-﻿using System.Runtime.Intrinsics.X86;
+﻿using System.Runtime.Intrinsics.Arm;
+using System.Runtime.Intrinsics.X86;
 using Step3_WebApiConsumerConsole_Jwt.Models;
 using Step3_WebApiConsumerConsole_Jwt.Services;
 
@@ -7,7 +8,8 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        var ServiceUri = "https://localhost:7249";
+        //var ServiceUri = "https://localhost:7249";
+        var ServiceUri = "https://hellofrommartin.azurewebsites.net";
 
         var service = new FriendsHttpService(new Uri(ServiceUri));
 
